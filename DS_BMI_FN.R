@@ -18,12 +18,13 @@ bmi_converter <- function(height, weight) {
 # TESTING -----------------------------------------------------------------
 set.seed(123)
 # Height in cm
-height <- rnorm(50, 165, 10)
+height <- rnorm(n = 50, mean = 165, sd = 10)
+# Height in m
 height <- height / 100
 hist(height)
 
 # Weight in kg
-weight <- rnorm(50, 65, 10)
+weight <- rnorm(n = 50, mean = 65, sd = 10)
 hist(weight)
 
 # Histogram of BMI
