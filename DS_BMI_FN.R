@@ -1,5 +1,3 @@
-
-
 # START -------------------------------------------------------------------
 
 # This is a function to calculate BMI
@@ -11,31 +9,25 @@
 
 # BMI FUNCTION ------------------------------------------------------------
 
-bmi_converter<-function(h, w){
-  bmi<-w/(h^2)
+bmi_converter <- function(h, w) {
+  message("The BMI function assumes units are m for height and kg for weight")
+  bmi <- w / (h ^ 2)
   return(bmi)
 }
-
-
 
 # TESTING -----------------------------------------------------------------
 set.seed(123)
 # Height in cm
-height<-rnorm(50,165,10)
-
-height<-height/100
-
+height <- rnorm(50, 165, 10)
+height <- height / 100
 hist(height)
 
 # Weight in kg
-weight<-rnorm(50,65, 10)
+weight <- rnorm(50, 65, 10)
 hist(weight)
 
 # Histogram of BMI
-hist(bmi_converter(h=height, w=weight))
+hist(bmi_converter(h = height, w = weight))
 
-
+bmi_converter(h = height, w = weight)
 # END ---------------------------------------------------------------------
-
-
-
