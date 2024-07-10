@@ -9,9 +9,9 @@
 
 # BMI FUNCTION ------------------------------------------------------------
 
-bmi_converter <- function(h, w) {
+bmi_converter <- function(height, weight) {
   message("The BMI function assumes units are m for height and kg for weight")
-  bmi <- w / (h ^ 2)
+  bmi <- weight / (height ^ 2)
   return(bmi)
 }
 
@@ -27,7 +27,7 @@ weight <- rnorm(50, 65, 10)
 hist(weight)
 
 # Histogram of BMI
-hist(bmi_converter(h = height, w = weight))
+hist(bmi_converter(height = height, weight = weight))
 
 bmi_converter(h = height, w = weight)
 # END ---------------------------------------------------------------------
